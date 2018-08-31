@@ -1,12 +1,17 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
     <title>{% block title %}Alexander Schneider{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
     {% block additional_headers %}{% endblock %}
 </head>
 
 <body>
     {% block content %}{% endblock %}
+
+    <script src="{% static 'node_modules/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
 </body>
 
 </html>

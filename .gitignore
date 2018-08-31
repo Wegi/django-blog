@@ -104,4 +104,9 @@ venv.bak/
 .mypy_cache/
 
 #idea
-.idea/*
+.idea/
+
+#npm
+blog/static/node_modules/
+
+www/staticfiles/
