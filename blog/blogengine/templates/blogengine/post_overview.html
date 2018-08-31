@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <h2>{{ post.title }}</h2>
+        <small><i>Published: {{ post.pub_date }}</i></small>
+        <p>{{ post.text|safe|linebreaks }}</p>
+        {% if not forloop.last %}<hr>{% endif %}
+    {% endfor %}
+{% endblock %}
