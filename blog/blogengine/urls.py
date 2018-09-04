@@ -4,5 +4,6 @@ from blogengine import views
 app_name = "blogengine"
 
 urlpatterns = [
-    path('posts/', views.all_posts, name="posts.all")
+    path('posts/', views.all_posts, name="posts.all"),
+    path('post/<slug:slug>/', views.post, name="post"),
 ]

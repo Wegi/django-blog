@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load formatting %}
+
+{% block content %}
+    <div class="post">
+        <h2>{{ post.title }}</h2>
+        <small><i>Published: {{ post.pub_date }}</i></small>
+        <p>{{ post.text|safe_markdown }}</p>
+    </div>
+    <br>
+    <p><a href="{% url 'blog:posts.all' %}"><< all posts</a></p>
+{% endblock %}
