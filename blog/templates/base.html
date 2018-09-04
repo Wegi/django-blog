@@ -8,9 +8,10 @@
     <meta name="author" content="Alexander Schneider">
     <title>{% block title %}Alexander Schneider{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
     {% block additional_headers %}{% endblock %}
 </head>
-
+<body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary mb-3">
         <div class="container">
             <a class="navbar-brand" href="/">Alexander Schneider</a>
@@ -60,11 +61,12 @@
     </main><!-- /.container -->
 
 
-    <div class="container footer">
-        <div class="row">
+    <footer class="footer">
+        <div class="container">
             <p>Copyright &copy; {% now "Y" %} Alexander Schneider</p>
         </div>
-    </div>
+    </footer>
+
     <script src="{% static 'node_modules/jquery/dist/jquery.min.js' %}"></script>
     <script src="{% static 'node_modules/bootstrap/dist/js/bootstrap.min.js' %}"></script>
 </body>

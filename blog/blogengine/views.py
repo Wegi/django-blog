@@ -11,5 +11,5 @@ def all_posts(request):
 
 
 def post(request, slug):
-    post = Post.objects.get(slug=slug)
-    return render(request, "blogengine/post.html", {'post': post})
+    single_post = Post.objects.get(slug=slug)
+    return render(request, "blogengine/post.html", {'post': single_post})
