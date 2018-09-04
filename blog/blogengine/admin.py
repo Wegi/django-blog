@@ -3,4 +3,6 @@ from blogengine.models import Post
 # Register your models here.
 
 
-admin.site.register(Post)
+@admin.register(Post)
+class HeroAdmin(admin.ModelAdmin):
+    readonly_fields = ["slug"]
